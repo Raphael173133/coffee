@@ -1,3 +1,13 @@
+body, html {
+  height: auto; /* ou 100% si tu gères bien */
+  overflow: visible; /* pour laisser défiler */
+}
+
+.page-border {
+  height: auto;
+  overflow: visible;
+}
+
 {
       margin: 0;
       padding: 0;
