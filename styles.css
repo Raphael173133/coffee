@@ -648,3 +648,133 @@ img {
   max-width: 100%;
   height: auto;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Grid container responsive */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Card container responsive */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+}
+
+/* Header adjustments */
+header.hero {
+  height: auto; /* pour adapter en hauteur */
+  padding: 40px 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Navigation améliorée */
+header.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+header.hero button {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.footer-column {
+  flex: 1 1 150px;
+  min-width: 150px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .card-container {
+    justify-content: center;
+  }
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  header.hero h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  header.hero {
+    padding: 20px 10px;
+    height: auto;
+    text-align: center;
+  }
+
+  header.hero h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav {
+    position: static;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header.hero h1 {
+    font-size: 1rem;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+
+  .newsletter button {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+}
